@@ -1,0 +1,105 @@
+.explore-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-menu h1{
+    color:#262626;
+    font-weight: 500;
+}
+.explore-menu-text{
+    max-width: 60%;
+    columns: #808080;
+}
+.explore-menu-list {
+    display: flex;
+    justify-content: flex-start; /* Ensure items align from the start */
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: auto; /* Use auto to enable scrolling when needed */
+    white-space: nowrap; /* Prevent wrapping of flex items */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit-based browsers */
+}
+.explore-menu-list-item img{
+    width:7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.explore-menu-list-item p{
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.4vw,16px);
+    cursor: pointer;
+}
+.explore-menu hr{
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+.explore-menu-list-item .active{
+    border: 4px solid tomato;
+    padding: 2px;
+}
+/* Responsive Adjustments */
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+    }
+
+    .explore-menu-list-item img {
+        width: 9vw; /* Adjust the size for smaller screens */
+        min-width: 70px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: max(1.2vw, 14px); /* Adjust text size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-menu {
+        gap: 15px;
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        text-align: justify; /* Ensures better text readability on smaller screens */
+    }
+
+    .explore-menu-list-item img {
+        width: 12vw; /* Further reduce size on mobile */
+        min-width: 60px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 14px;
+    }
+
+    .explore-menu-list {
+        gap: 15px; /* Reduce gap between items for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-menu h1 {
+        font-size: 24px;
+    }
+
+    .explore-menu-list-item img {
+        width: 14vw; /* Small size for very small screens */
+        min-width: 50px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 12px;
+    }
+}
+    

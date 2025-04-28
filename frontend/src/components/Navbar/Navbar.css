@@ -1,0 +1,216 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.nav-right {
+    display: flex;
+    /* Use flexbox to layout child elements in a row */
+    align-items: center;
+    /* Vertically align items */
+    gap: 35px;
+    /* Space between items */
+}
+
+.nav-right img {
+    /* Add styles for images if needed */
+    height: 24px;
+    /* Adjust height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.navbar-search-icon {
+    display: flex;
+    /* Ensure items within this div are aligned in a row */
+    align-items: center;
+    /* Vertically align items */
+    position: relative;
+    /* To position the dot relative to this container */
+}
+
+.navbar-search-icon .dot {
+    min-width: 8px;
+    /* Size of the dot */
+    min-height: 8px;
+    /* Size of the dot */
+    background-color: red;
+    /* Color of the dot */
+    border-radius: 5px;
+    /* Make it a circle */
+    position: absolute;
+    /* Position the dot */
+    top: -8px;
+    /* Adjust as needed */
+    right: -8px;
+    /* Adjust as needed */
+}
+
+.nav-right button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* Additional styles if needed */
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img{
+    width:20px;
+}
+.nav-profile-dropdown li:hover{
+    color: tomato;
+}
+
+
+/* Media Queries */
+
+/* For screens less than or equal to 1050px */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .nav-right {
+        gap: 30px;
+    }
+
+    .nav-right img {
+        width: 22px;
+    }
+
+    .nav-right button {
+        padding: 8px 25px;
+    }
+}
+
+/* For screens less than or equal to 900px */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .nav-right img {
+        width: 20px;
+    }
+
+    .nav-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+/* For screens less than or equal to 750px - Hide menu for mobile, show hamburger menu */
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+        /* Hide menu on mobile */
+    }
+
+    /* Adjust right side (sign-in, search) for mobile */
+    .nav-right {
+        gap: 15px;
+    }
+
+    .nav-right img {
+        width: 18px;
+    }
+
+    .nav-right button {
+        padding: 6px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Additional Media Queries for even smaller screens */
+@media (max-width: 600px) {
+    .navbar .logo {
+        width: 100px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-right img {
+        width: 16px;
+    }
+
+    .nav-right button {
+        padding: 5px 16px;
+        font-size: 13px;
+    }
+}

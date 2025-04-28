@@ -1,0 +1,99 @@
+/* Header Styles */
+.header {
+    height: 34vw; /* Makes the height dynamic */
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center center;
+    background-size: cover; /*Ensures background image covers the container */
+    position: relative;
+    border-radius: 15px;
+}
+
+/* Header Content */
+.header-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+/* Header Title */
+.header-content h2 {
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw, 22px); /* Scales font size based on screen */
+}
+
+/* Header Paragraph */
+.header-content p {
+    color: white;
+    font-size: 1vw;
+    max-width: 80%; /* Ensures text doesn’t stretch too wide */
+}
+
+/* Header Button */
+.header-content button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px); /* Scales font size */
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Responsive for Tablets and Smaller Desktops */
+@media (max-width: 1050px) {
+    .header-content {
+        max-width: 45%;
+        left: 4vw; /* Adjust the position for smaller screens */
+    }
+    .header-content h2 {
+        font-size: max(4vw, 20px); /* Adjusts size for medium screens */
+    }
+    .header-content button {
+        padding: 1.5vw 3vw; /* Increase padding for medium screens */
+    }
+}
+
+/* Responsive for Mobile Phones */
+@media (max-width: 750px) {
+    .header {
+        height: 65vw; /* Adjusts the height for smaller screens */
+    }
+    .header-content {
+        max-width: 90%; /* Content takes up more width on smaller screens */
+        left: 5%; /* Adjust the position */
+        bottom: 5%; /* Position it slightly higher */
+    }
+    .header-content h2 {
+        font-size: max(6vw, 18px); /* Smaller font size on mobile */
+    }
+    .header-content p {
+        display: none; /* Hide paragraph text on small screens to save space */
+    }
+    .header-content button {
+        padding: 2vw 4vw; /* Larger button padding for better usability */
+    }
+}
+
+/* Extra small screens (Mobile landscape or very small phones) */
+@media (max-width: 480px) {
+    .header-content {
+        max-width: 100%; /* Full width for very small screens */
+        left: 2vw; /* Slight margin for smaller devices */
+        bottom: 5%;
+    }
+    .header-content h2 {
+        font-size: max(7vw, 16px); /* Further reduce font size */
+    }
+    .header-content button {
+        padding: 3vw 6vw; /* Larger padding for touch usability */
+        font-size: max(3vw, 14px); /* Adjust button text size */
+    }
+}
